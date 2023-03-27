@@ -122,15 +122,40 @@ function addAsync(x, y) {
 }
 
 
+
+
+
 addAsync(10, null)
     .then(result => {
-        console.log(result);
+        console.log('1st', result);
     })
     .catch(error => {
-        console.error(error.message)
+        console.error('1st', error.message)
+    });
+
+
+
+
+
+
+
+    addAsync(15, 52)
+    .then(result => {
+        console.log('2nd', result);
     })
+    .catch(error => {
+        console.error('2nd', error.message)
+    });
 
 
 
 
 
+    
+    addAsync(15)
+    .then(result => {
+        console.log('3rd', result);
+    })
+    .catch(error => {
+        console.error('3rd', error.message)
+    });
